@@ -10,9 +10,12 @@ def count_book_text(text):
     return word_count
 
 # Count number of characters (in progress)
-def count_char(text):
+def count_book_char(text):
     char_count = 0
+    char_dict = {}
     with open(text) as words:
-        chars_lower = words.lower()
-        for chars in chars_lower
-    return
+        chars_list = list(words.lower())
+        for char in chars_list:
+            char_dict[char] += 1
+
+    return char_dict
