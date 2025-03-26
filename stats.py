@@ -14,7 +14,8 @@ def count_book_char(text):
     char_count = 0
     char_dict = {}
     with open(text) as words:
-        chars_list = list(words.lower())
+        lower_char = words.lower()
+        chars_list = list(lower_char)
         for char in chars_list:
             char_dict[char] += 1
 
