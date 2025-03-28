@@ -23,3 +23,16 @@ def count_book_char(text):
                  char_dict[char] = 1
 
     return char_dict
+
+# Sort characters by number of times it appears
+def sort_book_char(dict):
+    # Transform the dictionary into a list of dictionaries
+    list = []
+    for char, count in dict.items():
+        if char.isalpha():# Only include alphabetical characters
+            list.append({"char": char, "count":count})
+    
+    # Sort the list by count (highest to lowest)
+    list.sort(reverse=True, key=lambda x: x["count"])
+
+    return list
